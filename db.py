@@ -3,8 +3,9 @@ from firebase_admin import credentials
 from firebase_admin import firestore 
 import datetime
 import uuid 
+import os 
 
-cred = credentials.Certificate("firebase/recipe-for-myhome-firebase-adminsdk-dlmty-793cda4a08.json")
+cred = credentials.Certificate(f"firebase/{os.getenv("FIREBASE_KEY")}")
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()

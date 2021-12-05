@@ -50,5 +50,3 @@ def find_similar_recipe(keywords: str):
     except Exception as e:
         print(f"[ERROR] {e}")
         return False
-
-find_similar_recipe("こんにちは")
